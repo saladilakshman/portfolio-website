@@ -109,7 +109,7 @@ function App() {
   })
   const callComponent = (
     <Box component="a" href="tel:+919121357499" sx={{
-      color: 'black',
+      color: isnight ? 'black' : 'white',
       textDecoration: 'none',
     }}>9121357499</Box>
   )
