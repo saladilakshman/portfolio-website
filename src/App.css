@@ -1,0 +1,35 @@
+
+.text-box{
+    animation:  10s infinite;
+    background-image:linear-gradient(to right,#FF6868,#FF68DE);
+    background-clip:text;
+    color:transparent;
+}
+@keyframes color{
+    0%{
+      background-image:linear-gradient(to right,#FF9E68,#FF68DE);
+      background-clip:text;
+      color:transparent;
+    }
+    25%{
+        background-image:linear-gradient(to right,#FDC639,#FF7C60);
+        background-clip:text;
+        color:transparent;
+    }
+    50%{
+        background-image:linear-gradient(to right,#FF6868,#FF68DE);
+        background-clip:text;
+        color:transparent;
+    }
+    100%{
+        background-image:linear-gradient(to right,#6880FF,#C668FF);
+        background-clip:text;
+        color:transparent;
+    }
+    h1{
+        font-weight:400px
+    }
+}
+.img{
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
+}
