@@ -89,6 +89,7 @@ function App() {
       minute: "numeric",
       second: "numeric",
       hour12: true,
+      timeZone: 'Asia/Kolkata',
       dayPeriod: 'long'
     }
     setInterval(() => {
