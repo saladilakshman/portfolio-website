@@ -89,12 +89,11 @@ function App() {
       minute: "numeric",
       second: "numeric",
       hour12: true,
-      timeZone: 'Asia/Kolkata',
       dayPeriod: 'long'
     }
     setInterval(() => {
       const mode_checker = new Intl.DateTimeFormat("en-IN", options).format(new Date());
-      if (mode_checker.includes("evening" || "night")) {
+      if (mode_checker.includes("evening") || mode_checker.includes("night")) {
         setIsnight(true)
       }
       else {
