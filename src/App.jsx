@@ -5,6 +5,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import './App.css';
 import { motion } from "framer-motion";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   Container,
   Box,
@@ -217,7 +218,7 @@ function App() {
 
             }}
           >
-            <Box component="img"
+            <Box component={LazyLoadImage}
               alt=""
               className="img"
               src={profile}
@@ -394,7 +395,7 @@ function App() {
                   height: '100%',
                   boxShadow: 4
                 }}>
-                  <CardMedia component="img" src={image} alt="" height="200" />
+                  <CardMedia component='img' src={image} alt="" height="200" loading="lazy" />
                   <CardContent>
                     <Typography variant="body1" color="inherit">{desc}</Typography>
                   </CardContent>
