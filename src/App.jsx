@@ -6,6 +6,7 @@ import "@fontsource/roboto/700.css";
 import "./App.css";
 import * as Colors from "@mui/material/colors";
 import { motion } from "framer-motion";
+import { info } from "./utils/info";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
   Container,
@@ -48,7 +49,6 @@ import {
   js,
   mongo,
   mui,
-  node,
   country,
   crypto,
   ricky,
@@ -382,7 +382,14 @@ function App() {
             >
               DXC Technology
             </h4>
-            <p>Incident Management, SQL, PowerBi, Shell Scripting, Excel</p>
+            <p>Incident Management, SQL, PowerBi, Shell Scripting</p>
+            <ul>
+              {info.map((q, index) => {
+                return (
+                  <li key={index} dangerouslySetInnerHTML={{ __html: q }} />
+                );
+              })}
+            </ul>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -553,6 +560,8 @@ function App() {
                     sx={{
                       height: "100%",
                       boxShadow: 4,
+                      border: 1,
+                      p: 0.8,
                     }}
                   >
                     <CardMedia
@@ -561,6 +570,7 @@ function App() {
                       alt=""
                       height="200"
                       loading="lazy"
+                      sx={{ borderRadius: 1 }}
                     />
                     <CardContent>
                       <Typography variant="body1" color="inherit">
