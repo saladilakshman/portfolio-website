@@ -4,6 +4,7 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./App.css";
+import * as Colors from "@mui/material/colors";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
@@ -193,10 +194,10 @@ function App() {
           >
             <Box className="text-box">
               <Typography variant={Mobile ? "h5" : "h3"} className="h1">
-                Hi, I`m Saladi Lakshman
+                {`Hi, I'm Saladi Lakshman`}
               </Typography>
               <Typography variant={Mobile ? "h6" : "h4"}>
-                Analyst & MERN Stack Enthusiast
+                Analyst & Frontend developer
               </Typography>
             </Box>
             <Stack
@@ -248,10 +249,13 @@ function App() {
               <Button
                 variant="contained"
                 sx={{
-                  backgroundColor: "#c27094",
+                  backgroundColor: Colors.purple[400],
                   "&:hover,&:focus": {
-                    backgroundColor: "#c27094",
+                    backgroundColor: Colors.purple[500],
                   },
+                  textTransform: "capitalize",
+                  color: "white",
+                  fontWeight: 400,
                 }}
                 size="small"
                 onClick={() => setShowPdf(true)}
@@ -266,7 +270,9 @@ function App() {
                 sx={{
                   borderColor: isnight ? "white" : "black",
                   color: isnight ? "white" : "black",
+                  textTransform: "capitalize",
                   marginInline: 1.2,
+                  fontWeight: 400,
                   "&:hover,&:focus": {
                     borderColor: isnight ? "white" : "black",
                     color: isnight ? "white" : "black",
@@ -501,7 +507,7 @@ function App() {
                 stiffnes: 5,
               }}
             >
-              Projects I built
+              Projects
             </Typography>
             <Divider />
           </Container>
@@ -553,9 +559,12 @@ function App() {
                         href={demo}
                         size="small"
                         sx={{
-                          bgcolor: "#c27094",
+                          bgcolor: Colors.purple[400],
+                          textTransform: "capitalize",
+                          color: "white",
+                          fontWeight: 400,
                           "&:hover,&:focus": {
-                            bgcolor: "#c27094",
+                            bgcolor: Colors.purple[500],
                           },
                         }}
                       >
@@ -567,6 +576,7 @@ function App() {
                         component="a"
                         href={code}
                         size="small"
+                        sx={{ textTransform: "capitalize" }}
                       >
                         get code
                       </Button>
@@ -592,14 +602,16 @@ function App() {
               sx={{
                 display: "block",
                 margin: "auto",
-                width: 190,
+                width: "20%",
+                textAlign: "center",
                 marginBlockEnd: 5,
-                borderColor: "#c27094",
-                color: "#c27094",
+                borderColor: Colors.purple[400],
+                color: Colors.purple[400],
                 "&:hover,&:focus": {
-                  borderColor: "#c27094",
-                  color: "#c27094",
+                  borderColor: Colors.purple[500],
+                  color: Colors.purple[500],
                 },
+                textTransform: "capitalize",
               }}
             >
               View more projects
@@ -609,7 +621,7 @@ function App() {
       </Container>
       <Box
         sx={{
-          bgcolor: "#c27094",
+          bgcolor: Colors.purple[300],
         }}
       >
         <Typography
