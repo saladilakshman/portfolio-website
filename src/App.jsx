@@ -55,10 +55,23 @@ import {
   shop,
   translate,
   resort,
+  tailwind,
+  reactrouter,
 } from "./assets/index";
 import pdffile from "./sample.pdf";
 function App() {
-  const Images = [react, git, express, css, html, js, mongo, mui, node];
+  const Images = [
+    react,
+    git,
+    express,
+    css,
+    html,
+    js,
+    mongo,
+    mui,
+    tailwind,
+    reactrouter,
+  ];
   const Projects = [
     {
       image: country,
@@ -466,6 +479,8 @@ function App() {
                         width: { lg: 120, xs: 100 },
                         height: 120,
                         p: 1,
+                        boxShadow: 4,
+                        boxSizing: "border-box",
                       }}
                     >
                       <Box
@@ -595,27 +610,27 @@ function App() {
               y: 10,
             }}
           >
-            <Button
-              variant="outlined"
-              component="a"
-              href="https://github.com/saladilakshman"
-              sx={{
-                display: "block",
-                margin: "auto",
-                width: "20%",
-                textAlign: "center",
-                marginBlockEnd: 5,
-                borderColor: Colors.purple[400],
-                color: Colors.purple[400],
-                "&:hover,&:focus": {
-                  borderColor: Colors.purple[500],
-                  color: Colors.purple[500],
-                },
-                textTransform: "capitalize",
-              }}
-            >
-              View more projects
-            </Button>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <Button
+                variant="outlined"
+                component="a"
+                href="https://github.com/saladilakshman"
+                sx={{
+                  display: "inline-block",
+                  textAlign: "center",
+                  marginBlockEnd: 5,
+                  borderColor: Colors.purple[400],
+                  color: Colors.purple[400],
+                  "&:hover,&:focus": {
+                    borderColor: Colors.purple[500],
+                    color: Colors.purple[500],
+                  },
+                  textTransform: "capitalize",
+                }}
+              >
+                View more projects
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Container>

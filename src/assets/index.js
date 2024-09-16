@@ -13,4 +13,24 @@ import resort from "./resort.png";
 import ricky from "./ricky.png";
 import shop from "./shop.png";
 import translate from "./translate.png";
-export  {react, git,express,css,html,js,mongo,mui,node,country,crypto,ricky,shop,translate,resort} 
+import tailwind from "./tailwind.png";
+import reactrouter from "./reactrouter.png";
+export {
+  react,
+  git,
+  express,
+  css,
+  html,
+  js,
+  mongo,
+  mui,
+  node,
+  country,
+  crypto,
+  ricky,
+  shop,
+  translate,
+  resort,
+  tailwind,
+  reactrouter,
+};
