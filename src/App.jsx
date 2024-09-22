@@ -6,7 +6,6 @@ import "@fontsource/roboto/700.css";
 import "./App.css";
 import * as Colors from "@mui/material/colors";
 import { motion } from "framer-motion";
-import { info } from "./utils/info";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
   Container,
@@ -357,7 +356,7 @@ function App() {
             }}
           />
         </Container>
-        <VerticalTimeline>
+        <VerticalTimeline animate>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
@@ -382,14 +381,15 @@ function App() {
             >
               DXC Technology
             </h4>
-            <p>Incident Management, SQL, PowerBi, Shell Scripting</p>
-            <ul>
-              {info.map((q, index) => {
-                return (
-                  <li key={index} dangerouslySetInnerHTML={{ __html: q }} />
-                );
-              })}
-            </ul>
+            <p> Skills : ITIL, SQL, PowerBi, Shell Scripting</p>
+            <p style={{ fontWeight: "400" }}>
+              As an infrastructure support specialist for the AT&T project, I
+              focus on monitoring tickets, resolving incidents, and enhancing
+              operational efficiency. Utilizing SQL for data analysis and
+              PowerShell scripting for automation, I work closely with delivery
+              teams to ensure timely incident acknowledgment and resolution,
+              contributing to improved service restoration times.
+            </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -560,8 +560,8 @@ function App() {
                     sx={{
                       height: "100%",
                       boxShadow: 4,
-                      border: 1,
-                      p: 0.8,
+                      border: isnight ? 1 : 0,
+                      p: isnight ? 0.8 : 0,
                     }}
                   >
                     <CardMedia
