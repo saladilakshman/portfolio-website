@@ -473,7 +473,7 @@ function App() {
                   <Chip
                     label={tag}
                     key={index}
-                    variant="contained"
+                    variant={isnight ? "outlined" : "contained"}
                     size="medium"
                     avatar={<Avatar alt="" size="large" src={Images[index]} />}
                     sx={{
