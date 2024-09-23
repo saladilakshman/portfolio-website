@@ -28,6 +28,8 @@ import {
   ThemeProvider,
   CssBaseline,
   Button,
+  Chip,
+  Avatar,
 } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -47,7 +49,6 @@ import {
   html,
   js,
   mongo,
-  mui,
   country,
   crypto,
   ricky,
@@ -69,6 +70,17 @@ function App() {
     mongo,
     tailwind,
     reactrouter,
+  ];
+  const tages = [
+    "Reactjs",
+    "Git",
+    "Expressjs",
+    "Css",
+    "Html",
+    "Javascript",
+    "Mongodb",
+    "TailwindCss",
+    "React-Router",
   ];
   const Projects = [
     {
@@ -136,7 +148,7 @@ function App() {
   }, [isnight]);
   const dark_theme = createTheme({
     palette: {
-      mode: isnight ? "dark" : "light",
+      mode: "dark",
     },
   });
   const callComponent = (
@@ -418,7 +430,6 @@ function App() {
           </VerticalTimelineElement>
         </VerticalTimeline>
       </Box>
-
       <Container>
         <Box
           sx={{
@@ -448,66 +459,33 @@ function App() {
             Tools and Technologies
           </Typography>
           <Divider />
-          <Container
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Grid
-              container
-              spacing={1.2}
-              sx={{
-                palceItems: "center",
-                width: { lg: 800, sm: 440, xs: 490 },
-                marginBlockStart: 3,
-                marginBlockEnd: 5,
-              }}
+          <Box>
+            <Stack
+              direction="row"
+              gap={2}
+              flexWrap="wrap"
+              justifyContent={"center"}
+              alignItems={"start"}
+              sx={{ py: 3 }}
             >
-              {Array.from(Images, (image, index) => {
+              {tages.map((tag, index) => {
                 return (
-                  <Grid
-                    item
-                    xs={4}
-                    sm={4}
-                    lg={2}
-                    spacing={1}
+                  <Chip
+                    label={tag}
                     key={index}
-                    component={motion.div}
-                    initial={{
-                      opacity: 0,
+                    variant="contained"
+                    size="medium"
+                    avatar={<Avatar alt="" size="large" src={Images[index]} />}
+                    sx={{
+                      //width: Mobile ? "100%" : "100%",
+                      fontSize: 15,
+                      //height: 32,
                     }}
-                    whileInView={{
-                      opacity: 1,
-                      transitionDelay: 2,
-                    }}
-                  >
-                    <Paper
-                      sx={{
-                        width: { lg: 120, xs: 100 },
-                        height: 120,
-                        p: 1,
-                        boxShadow: 4,
-                        boxSizing: "border-box",
-                      }}
-                    >
-                      <Box
-                        component="img"
-                        src={image}
-                        alt=""
-                        sx={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "fill",
-                        }}
-                      />
-                    </Paper>
-                  </Grid>
+                  />
                 );
               })}
-            </Grid>
-          </Container>
+            </Stack>
+          </Box>
         </Box>
         <Box sx={{ paddingBlockStart: { xs: 8, lg: 12 } }}>
           <Container>
