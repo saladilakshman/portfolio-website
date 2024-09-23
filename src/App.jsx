@@ -67,7 +67,6 @@ function App() {
     html,
     js,
     mongo,
-    mui,
     tailwind,
     reactrouter,
   ];
@@ -314,8 +313,11 @@ function App() {
               className="img"
               src={profile}
               sx={{
-                width: Mobile ? 200 : 370,
-                clipPath: "circle(40%)",
+                width: Mobile ? 200 : 250,
+                borderRadius: "50%",
+                outline: "1.8px solid rgb(238,174,202)",
+                mt: 2,
+                outlineOffset: 0.8,
               }}
             />
           </Box>
