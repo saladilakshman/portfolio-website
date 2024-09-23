@@ -148,7 +148,7 @@ function App() {
   }, [isnight]);
   const dark_theme = createTheme({
     palette: {
-      mode: "dark",
+      mode: isnight ? "dark" : "light",
     },
   });
   const callComponent = (
