@@ -19,7 +19,6 @@ import {
   CardMedia,
   CardContent,
   CardActions,
-  Paper,
   Grid,
   Divider,
   Dialog,
@@ -41,85 +40,9 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import {
-  react,
-  git,
-  express,
-  css,
-  html,
-  js,
-  mongo,
-  country,
-  crypto,
-  ricky,
-  shop,
-  translate,
-  resort,
-  tailwind,
-  reactrouter,
-} from "./assets/index";
 import pdffile from "./sample.pdf";
+import { tages, Images, Projects } from "./utils/helpers";
 function App() {
-  const Images = [
-    react,
-    git,
-    express,
-    css,
-    html,
-    js,
-    mongo,
-    tailwind,
-    reactrouter,
-  ];
-  const tages = [
-    "Reactjs",
-    "Git",
-    "Expressjs",
-    "Css",
-    "Html",
-    "Javascript",
-    "Mongodb",
-    "TailwindCss",
-    "React-Router",
-  ];
-  const Projects = [
-    {
-      image: country,
-      desc: "A web application that provides information about countries around the world.",
-      demo: "https://saladilakshman.github.io/country-app/",
-      code: "https://github.com/saladilakshman/country-app",
-    },
-    {
-      image: crypto,
-      desc: "A web application that provides cryptocurrency market statistics and trending crypto-related news",
-      demo: "https://saladilakshman.github.io/cryptolist/",
-      code: "https://github.com/saladilakshman/cryptolist",
-    },
-    {
-      image: ricky,
-      desc: 'A web application that provides information about the characters from the animated TV series "Rick and Morty".',
-      demo: "https://saladilakshman.github.io/rickymorty/",
-      code: "https://github.com/saladilakshman/rickymorty",
-    },
-    {
-      image: shop,
-      desc: "A web application for a Eye Glasses E-Commerce App to explore various glasswears for eye",
-      demo: "https://saladilakshman.github.io/shopping-app/",
-      code: "https://github.com/saladilakshman/shopping-app",
-    },
-    {
-      image: translate,
-      desc: "Google Web-translator, whcih translates texts to various languages supported by google and can copy the text too ",
-      demo: "https://saladilakshman.github.io/translator-app/",
-      code: "https://github.com/saladilakshman/translator-app",
-    },
-    {
-      image: resort,
-      desc: "Beach resort website, allowing users to explore available rooms, amenities, and nearby attractions",
-      demo: "https://react-kefkhw.stackblitz.io/",
-      code: "https://github.com/saladilakshman/Beach-resort-app",
-    },
-  ];
   const theme = useTheme();
   const Mobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [isnight, setIsnight] = useState(false);
@@ -324,6 +247,7 @@ function App() {
               alt=""
               className="img"
               src={profile}
+              placeholderSrc="https://via.placeholder.com/640x360/485764/FFFFFF?text="
               sx={{
                 width: Mobile ? 200 : 250,
                 borderRadius: "50%",
@@ -477,9 +401,7 @@ function App() {
                     size="medium"
                     avatar={<Avatar alt="" size="large" src={Images[index]} />}
                     sx={{
-                      //width: Mobile ? "100%" : "100%",
                       fontSize: 15,
-                      //height: 32,
                     }}
                   />
                 );
@@ -549,7 +471,7 @@ function App() {
                       src={image}
                       alt=""
                       height="200"
-                      loading="lazy"
+                      loading="eager"
                       sx={{ borderRadius: 1 }}
                     />
                     <CardContent>
