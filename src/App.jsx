@@ -175,7 +175,7 @@ function App() {
                   <LinkedInIcon />
                 </IconButton>
                 <IconButton
-                  sx={{ color: "#252525" }}
+                  sx={{ color: isnight ? "white" : "#252525" }}
                   size="small"
                   component="a"
                   onClick={() =>
