@@ -15,9 +15,13 @@ import shop from "./shop.png";
 import translate from "./translate.png";
 import tailwind from "./tailwind.png";
 import reactrouter from "./reactrouter.png";
+import vite from "./vite.png";
+import typescript from "./typescript.png";
 export {
   react,
   git,
+  vite,
+  typescript,
   express,
   css,
   html,

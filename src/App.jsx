@@ -31,7 +31,7 @@ import {
   Avatar,
 } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import { GitHub, Instagram } from "@mui/icons-material";
 import profile from "./assets/me.png";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
@@ -74,6 +74,7 @@ function App() {
       mode: isnight ? "dark" : "light",
     },
   });
+  let url = "https://www.instagram.com/lakshman__saladi/";
   const callComponent = (
     <Box
       component="a"
@@ -174,16 +175,22 @@ function App() {
                   <LinkedInIcon />
                 </IconButton>
                 <IconButton
-                  color="warning"
+                  sx={{ color: "#252525" }}
                   size="small"
                   component="a"
                   onClick={() =>
-                    window.open(
-                      "https://www.instagram.com/lakshman_saladi?igsh=dDY0cGMyMGNid2Pr"
-                    )
+                    window.open("https://github.com/saladilakshman")
                   }
                 >
-                  <InstagramIcon />
+                  <GitHub />
+                </IconButton>
+                <IconButton
+                  color="error"
+                  size="small"
+                  component="a"
+                  onClick={() => window.open(url)}
+                >
+                  <Instagram />
                 </IconButton>
               </Box>
             </Stack>
@@ -319,7 +326,10 @@ function App() {
             >
               DXC Technology
             </h4>
-            <p> Skills : ITIL, SQL, PowerBi, Shell Scripting</p>
+            <p>
+              {" "}
+              Skills : ITIL, ITSM, SQL, PowerBI, BMC Remedy, PagerDuty, Excel
+            </p>
             <p style={{ fontWeight: "400" }}>
               As an infrastructure support specialist for the AT&T project, I
               focus on monitoring tickets, resolving incidents, and enhancing

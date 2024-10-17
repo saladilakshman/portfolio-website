@@ -14,6 +14,8 @@ import {
   resort,
   tailwind,
   reactrouter,
+  vite,
+  typescript,
 } from "../assets/index";
 export const tages = [
   "Reactjs",
@@ -25,6 +27,8 @@ export const tages = [
   "Mongodb",
   "TailwindCss",
   "React-Router",
+  "Vite",
+  "Typescript",
 ];
 export const Images = [
   react,
@@ -36,6 +40,8 @@ export const Images = [
   mongo,
   tailwind,
   reactrouter,
+  vite,
+  typescript,
 ];
 export const Projects = [
   {
