@@ -7,6 +7,7 @@ import "./App.css";
 import * as Colors from "@mui/material/colors";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import {
   Container,
   Box,
@@ -40,7 +41,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import pdffile from "./sample.pdf";
+import pdffile from "./samples.pdf";
 import { tages, Images, Projects } from "./utils/helpers";
 function App() {
   const theme = useTheme();
@@ -316,21 +317,43 @@ function App() {
           >
             <h3
               className="vertical-timeline-element-title"
-              style={{ color: "white", fontFamily: "roboto" }}
+              style={{ color: "white", fontFamily: "roboto", fontWeight: 400 }}
             >
-              Analyst III Infrastructure services
+              Service Management Analyst
             </h3>
             <h4
               className="vertical-timeline-element-subtitle"
-              style={{ color: "white", fontFamily: "roboto" }}
+              style={{
+                color: "white",
+                fontFamily: "roboto",
+                fontWeight: 400,
+                display: "flex",
+                justifyContent: "start",
+                alignItems: "center",
+                gap: 2,
+              }}
             >
-              DXC Technology
+              DXC Technology,{" "}
+              <Box
+                component="span"
+                sx={{
+                  fontWeight: 400,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <LocationOnIcon sx={{ fontSize: 18 }} />
+                <Typography variant="h6" sx={{ fontWeight: 400, fontSize: 15 }}>
+                  Hyderabad
+                </Typography>
+              </Box>
             </h4>
             <p>
               {" "}
               Skills : ITIL, ITSM, SQL, PowerBI, BMC Remedy, PagerDuty, Excel
             </p>
-            <p style={{ fontWeight: "400" }}>
+            <p style={{ fontWeight: 400 }}>
               As an infrastructure support specialist for the AT&T project, I
               focus on monitoring tickets, resolving incidents, and enhancing
               operational efficiency. Utilizing SQL for data analysis and
